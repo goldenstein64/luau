@@ -79,7 +79,7 @@ The `never` type is also useful in cases such as tagged unions where
 some of the cases are impossible. For example:
 
 ```lua
-  type Result<T, E> = { err: false, val: T } | { err: true, err: E }
+  type Result<T, E> = { ok: true, val: T } | { ok: false, err: E }
 ```
 
 For code which we know is successful, we would like to be able to
